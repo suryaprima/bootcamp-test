@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/glyphicon.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Home</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow p-3 mb-5 bg-white rounded">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="https://www.arkademy.com/img/logo%20arkademy.1c82cf5c.svg" alt="logo-arkademy" class="d-inline-block align-botton" width="100" height="50">
+                ARKADEMY BOOTCAMP
+            </a>                            
+            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modalAdd">
+                ADD
+            </button>
+        </div>
+    </nav>
+    <div class="container">              
+        <!-- Start Modal ADD -->
+        <div class="modal fade" id="modalAdd" tabindex="-1" role="dialog" aria-labelledby="modalAddTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalAddTitle">ADD</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col">
+                                        <input type="text" class="form-control form-control-lg" id="name-field" placeholder="Name ..">
+                                        <br>
+                                    </div>                                
+                                </div>   
+                                <div class="row">
+                                    <div class="col">
+                                        <input type="text" class="form-control form-control-lg" id="work-field" placeholder="Work ..">
+                                        <br>
+                                    </div>                                
+                                </div>                                                         
+                                <div class="row">
+                                    <div class="col">
+                                        <input type="text" class="form-control form-control-lg" id="salary-field" placeholder="Salary ..">
+                                        <br>
+                                    </div>                                
+                                </div>                        
+                            </div>                    
+                        </form>
+                    </div>
+                    <div class="modal-footer">            
+                    <button type="button" class="btn btn-primary">ADD</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- End Modal ADD -->
+
+<!-- Start Modal EDIT -->
+        <div class="modal fade" id="modalEdit" tabindex="-1" role="dialog" aria-labelledby="modalEditTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalEditTitle">EDIT</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col">
+                                        <input type="text" class="form-control form-control-lg" id="name-field" placeholder="Bintang">
+                                        <br>
+                                    </div>                                
+                                </div>   
+                                <div class="row">
+                                    <div class="col">
+                                        <input type="text" class="form-control form-control-lg" id="work-field" placeholder="Backend Dev">
+                                        <br>
+                                    </div>                                
+                                </div>                                                         
+                                <div class="row">
+                                    <div class="col">
+                                        <input type="text" class="form-control form-control-lg" id="salary-field" value="Rp. 12.000.000">
+                                        <br>
+                                    </div>                                
+                                </div>                        
+                            </div>                    
+                        </form>
+                    </div>
+                    <div class="modal-footer">            
+                    <button type="button" class="btn btn-primary">EDIT</button>
+                    </div>
+                </div>
+            </div>
+        </div>  
+<!-- End Modal EDIT -->
+
+<!-- Start Modal DELETE -->
+        <div class="modal fade" id="modalDelete" tabindex="-1" role="dialog" aria-labelledby="modalDeleteTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-md" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <!-- <h5 class="modal-title" id="modalAddTitle"></h5> -->
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <img class="img-fluid img-thumbnail rounded mx-auto d-block" src="img/check_circle-24px.svg" alt="sukses-dihapus">
+                        <p class="text-center">Data Bintang telah berhasil dihapus</p>
+                    </div>
+                    <!-- <div class="modal-footer">            
+                    <button type="button" class="btn btn-primary">D</button>
+                    </div> -->
+                </div>
+            </div>
+        </div>  
+<!-- End Modal DELETE -->
+
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>                    
+                    <th>Name</th>
+                    <th>Work</th>
+                    <th>Salary</th>            
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>                    
+                    <th>Bintang</th>
+                    <th>Backend Dev</th>
+                    <th>Rp. 12.000.000</th>                    
+                    <th>                        
+
+                        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modalDelete">
+                            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                        </button>
+                        <button type="button" class="btn btn-default" aria-label="Left Align" data-toggle="modal" data-target="#modalEdit">
+                            <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                        </button>
+                    </th>
+                </tr>
+
+                <tr>                    
+                    <th>Tasya</th>
+                    <th>Backend Dev</th>
+                    <th>Rp. 12.000.000</th>                    
+                    <th>                        
+                        <button type="button" class="btn btn-default">
+                            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                        </button>
+                        <button type="button" class="btn btn-default" aria-label="Left Align">
+                            <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                        </button>
+                    </th>
+                </tr>
+
+                <tr>                    
+                    <th>Poetra</th>
+                    <th>Backend Dev</th>
+                    <th>Rp. 12.000.000</th>                    
+                    <th>                        
+                        <button type="button" class="btn btn-default">
+                            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                        </button>
+                        <button type="button" class="btn btn-default" aria-label="Left Align">
+                            <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                        </button>
+                    </th>
+                </tr>
+
+                <tr>                    
+                    <th>Joko</th>
+                    <th>Frontend Dev</th>
+                    <th>Rp. 10.000.000</th>                    
+                    <th>                        
+                        <button type="button" class="btn btn-default">
+                            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                        </button>
+                        <button type="button" class="btn btn-default" aria-label="Left Align">
+                            <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                        </button>
+                    </th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="js/jquery-3.4.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body> 
+</html>
